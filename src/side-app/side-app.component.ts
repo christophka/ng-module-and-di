@@ -9,6 +9,7 @@ import { SideAppService } from './services/side-app.service';
 })
 export class SideAppComponent implements OnInit {
   title = 'side-app';
+  protected clicks = 0;
 
   constructor(
     private messenger: MessengerService,
