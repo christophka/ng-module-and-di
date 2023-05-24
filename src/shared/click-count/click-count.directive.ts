@@ -1,13 +1,12 @@
 import {
   Directive,
   EventEmitter,
-  HostBinding,
   HostListener,
   Injectable,
   Output,
 } from '@angular/core';
+import { BehaviorSubject, skip } from 'rxjs';
 import { BaseService } from '../util/base-service';
-import { BehaviorSubject } from 'rxjs';
 
 @Injectable()
 class ClickCounter extends BaseService {
@@ -17,7 +16,7 @@ class ClickCounter extends BaseService {
 
   constructor() {
     super('ClickCounter');
-    this.clicks$.subscribe((clicks) => {
+    this.clicks$.pipe(skip(1)).subscribe((clicks) => {
       this.logger.log(clicks, 'clicks');
     });
   }

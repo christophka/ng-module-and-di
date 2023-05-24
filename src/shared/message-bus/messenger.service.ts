@@ -9,6 +9,8 @@ import { Subject } from 'rxjs';
 export class MessengerService extends BaseService implements IMessenger {
   private _msg = new Subject<Message<unknown>>();
 
+  public readonly message$ = this._msg.asObservable();
+
   constructor(private _bus: MessageBusService) {
     super('MessengerService');
     this._bus.register(this);

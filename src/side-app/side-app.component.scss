@@ -1,0 +1,8 @@
+:host {
+  height: 0;
+  flex-grow: 0;
+
+  &.is-visible {
+    flex-grow: 1;
+  }
+}

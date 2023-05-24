@@ -9,7 +9,6 @@ import { AppService } from './services/app.service';
 })
 export class AppComponent implements OnInit {
   title = 'ng-module-and-di';
-  protected clicks = 0;
 
   constructor(
     private messenger: MessengerService,

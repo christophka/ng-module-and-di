@@ -1,4 +1,7 @@
 <h1>App</h1>
 
-<div><strong>Clicks: </strong> {{ clicks }}</div>
-<button count-clicks (clicksChanged)="clicks = $event">count click</button>
+<nav>
+  <a routerLink="/count">Counter</a>
+</nav>
+
+<router-outlet></router-outlet>
