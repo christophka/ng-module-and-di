@@ -1,5 +1,9 @@
 # Angular Modules and Providers
 
-Module
+## Module
 
-Dependency Injection
+See [./module.md](./module.md).
+
+## Dependency Injection
+
+See [./di.md](./di.md).
